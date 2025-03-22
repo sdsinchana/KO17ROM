@@ -1,11 +1,11 @@
-class Library {
+class Specs {
     int id;
     String name;
-    String location;
-    int noOfBooks;
-    String librarian;
+    String type;
+    String manufacturer;
+    double price;
     
-    Library() {
+    Specs() {
         System.out.println("Constructor is Invoking");
     }
 }

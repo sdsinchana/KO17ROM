@@ -1,11 +1,12 @@
-class Product {
+class Hotel {
     int id;
     String name;
-    String category;
-    double price;
-    int stockQuantity;
+    String location;
+    int numberOfRooms;
+    String manager;
     
-    Product() {
+    Hotel() {
         System.out.println("Constructor is Invoking");
     }
 }
+

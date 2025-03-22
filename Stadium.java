@@ -1,12 +1,11 @@
-class Hospital {
-
+class Stadium {
     int id;
     String name;
     String location;
-    int noOfBeds;
-    String specialization;
+    int capacity;
+    String homeTeam;
     
-    Hospital() {
+    Stadium() {
         System.out.println("Constructor is Invoking");
     }
 }

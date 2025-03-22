@@ -1,12 +1,12 @@
-class GovernmentId {
-
+class Cards {
     int id;
     String name;
     String type;
-    String issuingAuthority;
-    String country;
+    String rarity;
+    int value;
     
-    GovernmentId() {
+    Cards() {
         System.out.println("Constructor is Invoking");
     }
 }
+

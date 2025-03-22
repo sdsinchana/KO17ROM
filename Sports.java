@@ -1,11 +1,11 @@
-class Salon {
+class Sports {
     int id;
     String name;
-    String location;
-    int noOfStylists;
-    String specialty;
+    String type;
+    int numberOfPlayers;
+    String originCountry;
     
-    Salon() {
+    Sports() {
         System.out.println("Constructor is Invoking");
     }
 }
