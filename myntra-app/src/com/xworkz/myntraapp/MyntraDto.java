@@ -1,0 +1,61 @@
+package com.xworkz.myntraapp;
+
+public class MyntraDto {
+
+        private String brand;
+        private String productCategory; // e.g., Shirt, Dress, Footwear
+        private String fabricType; // e.g., Cotton, Silk, Synthetic
+        private String targetAudience; // e.g., Men, Women, Kids
+        private double discountRate;
+        private boolean returnPolicy;
+
+        public void setBrand(String brand) {
+            this.brand = brand;
+        }
+
+        public String getBrand() {
+            return brand;
+        }
+
+        public void setProductCategory(String productCategory) {
+            this.productCategory = productCategory;
+        }
+
+        public String getProductCategory() {
+            return productCategory;
+        }
+
+        public void setFabricType(String fabricType) {
+            this.fabricType = fabricType;
+        }
+
+        public String getFabricType() {
+            return fabricType;
+        }
+
+        public void setTargetAudience(String targetAudience) {
+            this.targetAudience = targetAudience;
+        }
+
+        public String getTargetAudience() {
+            return targetAudience;
+        }
+
+        public void setDiscountRate(double discountRate) {
+            this.discountRate = discountRate;
+        }
+
+        public double getDiscountRate() {
+            return discountRate;
+        }
+
+        public void setReturnPolicy(boolean returnPolicy) {
+            this.returnPolicy = returnPolicy;
+        }
+
+        public boolean isReturnPolicy() {
+            return returnPolicy;
+        }
+    }
+
+
