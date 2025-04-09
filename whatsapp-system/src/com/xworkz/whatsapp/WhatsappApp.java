@@ -1,10 +1,13 @@
 package com.xworkz.whatsapp;
 
 public class WhatsappApp {
-
+WhatsappDto dto;
         public void launchChat(WhatsappDto dto) {
+            boolean isvalid;
             boolean isValid = isProfileValid(dto);
             if (isValid) {
+                isvalid =true;
+                this.dto=dto;
                 System.out.println("WhatsApp profile loaded successfully!");
             } else {
                 System.out.println("Failed to load WhatsApp profile. Please check the details.");
@@ -34,16 +37,16 @@ public class WhatsappApp {
                 isValid = false;
             }
 
-            // Optional info
-            if (dto.isOnline()) {
-                System.out.println(dto.getUserName() + " is currently online.");
-            }
 
-            if (dto.isTyping()) {
-                System.out.println(dto.getUserName() + " is typing...");
-            }
 
             return isValid;
+        }
+
+        public  void fetchDetails(){
+            System.out.println("User Name :"+dto.getUserName());
+            System.out.println("Phone Number :"+dto.getPhoneNumber());
+            System.out.println("Status Message :"+dto.getStatusMessage());
+            System.out.println("Unread Message Count :"+dto.getUnreadMessagesCount());
         }
 
 

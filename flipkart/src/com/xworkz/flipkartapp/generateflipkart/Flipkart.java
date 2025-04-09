@@ -3,12 +3,14 @@ package com.xworkz.flipkartapp.generateflipkart;
 import com.xworkz.flipkartapp.flipkartdto.FlipkartDto;
 
 public class Flipkart {
-
+FlipkartDto dto;
     public boolean placeOrder(FlipkartDto dto) {
+
         boolean orderPlaced = false;
         boolean validated = validateOrder(dto);
         if (validated) {
             orderPlaced = true;
+            this.dto = dto;
             System.out.println("Order placed successfully!");
         } else {
             System.out.println("Order validation failed!");
@@ -84,6 +86,15 @@ public class Flipkart {
 
         return orderValidated;
     }
-
+    public void fetchDetails(){
+        System.out.println("Customer Name: " + dto.getCustomerName());
+        System.out.println("Email: " + dto.getEmail());
+        System.out.println("Address: " + dto.getAddress());
+        System.out.println("Contact Number: " + dto.getContactNumber());
+        System.out.println("Product: " + dto.getProductName());
+        System.out.println("Quantity: " + dto.getQuantity());
+        System.out.println("Price: " + dto.getPrice());
+        System.out.println("Payment Method: " + dto.getPaymentMethod());
+    }
 }
 

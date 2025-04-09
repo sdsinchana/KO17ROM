@@ -1,28 +1,16 @@
 package com.xworkz.jiohotstarapp;
 
 public class JioHotStarApp {
-
+JioHotStarDto dto;
         public void streamContent(JioHotStarDto dto) {
+            boolean isvalid;
             boolean isValid = isContentValid(dto);
             if (isValid) {
-                System.out.println("Now streaming: " + dto.getShowName());
-                System.out.println("Genre: " + dto.getGenre());
-                System.out.println("Duration: " + dto.getDuration() + " mins");
-
-                if (dto.getLive()) {
-                    System.out.println("LIVE broadcast is ongoing!");
-                } else {
-                    System.out.println("On-demand streaming available.");
-                }
-
-                if (dto.isPremium()) {
-                    System.out.println("Premium content - Subscription required.");
-                } else {
-                    System.out.println("Free to watch.");
-                }
-
-                System.out.println("Rating: " + dto.getRating() + "/10");
-            } else {
+                isvalid =true;
+                this.dto = dto;
+                System.out.println("Now streaming on JioHotStar ");
+            }
+            else {
                 System.out.println("Cannot stream. Please check content details.");
             }
         }
@@ -52,6 +40,14 @@ public class JioHotStarApp {
 
             return isValid;
         }
+        public void fetchDetails(){
+            System.out.println("Show Name :"+dto.getShowName());
+            System.out.println("Genre :"+dto.getGenre());
+            System.out.println("Duration :"+dto.getDuration());
+            System.out.println("Rating :"+dto.getRating());
+
+        }
+
 
 
 }

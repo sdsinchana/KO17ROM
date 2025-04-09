@@ -1,23 +1,15 @@
 package com.xworkz.zeptoapp;
 
 public class ZeptoApp {
-
+ZeptoDto dto;
 
         public void placeOrder(ZeptoDto dto) {
+            boolean isvalid;
             boolean isValid = isOrderValid(dto);
             if (isValid) {
-                System.out.println("Placing order for: " + dto.getItemName() + " from " + dto.getStoreName());
-
-                System.out.println("Category: " + dto.getCategory());
-                System.out.println("Quantity: " + dto.getQuantity());
-
-                if (dto.isExpressDelivery()) {
-                    System.out.println(" Express delivery selected! Your order will arrive soon.");
-                } else {
-                    System.out.println(" Standard delivery applied.");
-                }
-
-                System.out.println("Total Price: ₹" + dto.getTotalPrice());
+                isvalid = true;
+                this.dto = dto;
+                System.out.println("Placing order for customer from Zepto" );
             } else {
                 System.out.println(" Failed to place order. Please check item details.");
             }
@@ -53,6 +45,13 @@ public class ZeptoApp {
 
             return isValid;
         }
+        public  void fetchDetails(){
+            System.out.println("Item Name :"+dto.getItemName());
+            System.out.println("Store Name :"+dto.getStoreName());
+            System.out.println("Category :"+dto.getCategory());
+            System.out.println("Quantity :"+dto.getQuantity());
+            System.out.println("Total Price :"+dto.getTotalPrice());
 
+        }
 
 }

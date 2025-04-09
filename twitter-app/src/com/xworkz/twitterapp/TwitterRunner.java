@@ -7,7 +7,7 @@ public class TwitterRunner {
             TwitterDto dto = new TwitterDto();
 
             dto.setUserName("sinchana_sd");
-            dto.setTweetContent("Excited to explore Java Spring Boot! ☕🚀");
+            dto.setTweetContent("Excited to explore Java Spring Boot.");
             dto.setTweetLength(43);
             dto.setLocation("Bangalore");
             dto.setIsVerified(true);
@@ -15,6 +15,7 @@ public class TwitterRunner {
 
             TwitterApp app = new TwitterApp();
             app.postTweet(dto);
+            app.fetchDetails();
         }
     
 

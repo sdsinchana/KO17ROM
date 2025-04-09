@@ -15,6 +15,7 @@ public class DominosRunner {
 
             DominosApp dominosApp = new DominosApp();
             dominosApp.registerOrder(dominos);
+            dominosApp.fetchDetails();
         }
     }
 

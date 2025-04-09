@@ -4,7 +4,7 @@ public class DominosDto {
 
 
         private String pizzaName;
-        private String size; // Small, Medium, Large
+        private String size;
         private String toppings;
         private int quantity;
         private double price;
@@ -54,7 +54,7 @@ public class DominosDto {
             this.isDelivery = isDelivery;
         }
 
-        public boolean isDelivery() {
+        public boolean getIsDelivery() {
             return isDelivery;
         }
     }

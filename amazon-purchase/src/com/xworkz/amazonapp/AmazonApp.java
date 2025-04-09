@@ -1,52 +1,68 @@
 package com.xworkz.amazonapp;
 
 public class AmazonApp {
+    AmazonDto dto;
 
+    public void UserRegistered(AmazonDto amazonDto) {
+        boolean isValid = validateUser(amazonDto);
+        boolean isvalid = false;
 
-        public void registerOrder(AmazonDto amazon) {
-            boolean isOrderValid = isOrderValid(amazon);
-            if (isOrderValid) {
-                System.out.println("Order placed successfully!");
-            } else {
-                System.out.println("Order placement failed. Please check the product details.");
-            }
+        if (isValid) {
+            isvalid = true;
+            dto = amazonDto;
+            System.out.println("Registration done successfully");
+        } else {
+            System.out.println("Registration failed");
         }
+    }
 
-        public boolean isOrderValid(AmazonDto amazon) {
-            boolean isValid = true;
+    public boolean validateUser(AmazonDto amazonDto) {
+        boolean isvalid = false;
+        boolean isFullNameValid = false;
+        boolean isMobileNumberValid = false;
+        boolean isEmailValid = false;
+        boolean isPasswordValid = false;
+        boolean isShippingAddressValid = false;
 
-            if (amazon.getProductName() == null || amazon.getProductName().isEmpty()) {
-                System.out.println("Invalid product name.");
-                isValid = false;
-            }
+        if (amazonDto.getFullName() != null && !amazonDto.getFullName().isEmpty())
+            isFullNameValid = true;
+        else
+            System.out.println("Invalid full name. Please try again later.");
 
-            if (amazon.getPrice() <= 0) {
-                System.out.println("Price must be greater than zero.");
-                isValid = false;
-            }
+        if (amazonDto.getMobileNumber() != null && !amazonDto.getMobileNumber().isEmpty())
+            isMobileNumberValid = true;
+        else
+            System.out.println("Invalid mobile number. Please try again later.");
 
-            if (amazon.getQuantity() <= 0) {
-                System.out.println("Quantity must be greater than zero.");
-                isValid = false;
-            }
+        if (amazonDto.getEmail() != null && amazonDto.getEmail().contains("@"))
+            isEmailValid = true;
+        else
+            System.out.println("Invalid email address. Please enter a valid email.");
 
-            if (amazon.getSellerName() == null || amazon.getSellerName().isEmpty()) {
-                System.out.println("Invalid seller name.");
-                isValid = false;
-            }
+        if (amazonDto.getPassword() != null && !amazonDto.getPassword().isEmpty())
+            isPasswordValid = true;
+        else
+            System.out.println("Invalid password.");
 
-            if (amazon.getCategory() == null || amazon.getCategory().isEmpty()) {
-                System.out.println("Invalid product category.");
-                isValid = false;
-            }
+        if (amazonDto.getShippingAddress() != null && !amazonDto.getShippingAddress().isEmpty())
+            isShippingAddressValid = true;
+        else
+            System.out.println("Invalid shipping address.");
 
-            if (!amazon.isInStock()) {
-                System.out.println("Product is out of stock.");
-                isValid = false;
-            }
+        if (isFullNameValid && isMobileNumberValid && isEmailValid && isPasswordValid && isShippingAddressValid)
+            isvalid = true;
 
-            return isValid;
-        }
+        return isvalid;
+    }
+
+    public void fetchDetails() {
+        System.out.println("Full name is: " + dto.getFullName());
+        System.out.println("User mobile number is: " + dto.getMobileNumber());
+        System.out.println("User email is: " + dto.getEmail());
+        System.out.println("User shipping address is: " + dto.getShippingAddress());
+        System.out.println("User password is: " + dto.getPassword());
+    }
+
     }
 
 

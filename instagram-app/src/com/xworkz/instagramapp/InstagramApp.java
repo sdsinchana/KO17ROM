@@ -2,10 +2,14 @@ package com.xworkz.instagramapp;
 
 public class InstagramApp {
 
-
+InstagramDto dto;
         public void registerProfile(InstagramDto instagram) {
+            boolean isvalid = false;
             boolean isValid = isProfileValid(instagram);
+
             if (isValid) {
+                isvalid = true;
+                dto = instagram;
                 System.out.println("Instagram profile created successfully!");
             } else {
                 System.out.println("Profile creation failed. Please check the details.");
@@ -41,6 +45,14 @@ public class InstagramApp {
             }
 
             return isValid;
+        }
+        public void fetchDetails(){
+            System.out.println("User Name :"+dto.getUserName());
+            System.out.println("Full Name :"+dto.getFullName());
+            System.out.println("Bio of Username :"+dto.getBio());
+            System.out.println("Followers Count :"+dto.getFollowersCount());
+            System.out.println("Following Count :"+dto.getFollowingCount());
+
         }
     }
 

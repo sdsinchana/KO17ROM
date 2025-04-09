@@ -15,6 +15,7 @@ public class MyntraRunner {
 
             MyntraApp app = new MyntraApp();
             app.registerProduct(dto);
+            app.fetchDetails();
         }
     }
 

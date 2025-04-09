@@ -3,10 +3,12 @@ package com.xworkz;
 import com.xworkz.carcontrolapp.CarControlDto;
 
 public class CarControl {
+    CarControlDto dto;
     public boolean startControl(CarControlDto dto) {
         boolean controlStarted = false;
         boolean validated = validateCar(dto);
         if (validated) {
+            this.dto = dto;
             controlStarted = true;
             System.out.println("Car control started successfully!");
         } else {
@@ -78,5 +80,17 @@ public class CarControl {
         }
 
         return carValidated;
+    }
+    public void fetchDetails(){
+        System.out.println("Car Model: " + dto.getCarModel());
+        System.out.println("License Plate: " + dto.getLicensePlate());
+        System.out.println("Owner: " + dto.getOwnerName());
+        System.out.println("Contact: " + dto.getContactNumber());
+        System.out.println("Engine Status: " + dto.isEngineStatus());
+        System.out.println("Fuel Level: " + dto.getFuelLevel());
+        System.out.println("Speed: " + dto.getSpeed());
+        System.out.println("Control Mode: " + dto.getControlMode());
+
+
     }
 }

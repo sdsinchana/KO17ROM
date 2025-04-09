@@ -3,11 +3,16 @@ package com.xworkz.learningApp.learning;
 import com.xworkz.learningApp.learningdto.LearningDto;
 
 public class Learning {
+    LearningDto dto;
     public  boolean User(LearningDto learningDto){
+
         boolean isUserRegisterd = false;
         boolean uservalid = validateUser(learningDto);
-        if(uservalid == true )
+        if(uservalid) {
+            dto = learningDto;
             isUserRegisterd = true;
+            System.out.println("Successfully registered");
+        }
         else{
             System.out.println("not register");
         }
@@ -39,9 +44,15 @@ public class Learning {
         }
         if(isEmail == true && isName == true && isPhnNo == true && isCourseType == true && isPaymentType == true)
             isUserValidated = true;
-        else
-            System.out.println("try again");
+
         return isUserValidated;
+    }
+    public void fetchDetails() {
+        System.out.println("Full name is: " + dto.getName());
+        System.out.println("User mobile number is: " + dto.getPhnNo());
+        System.out.println("User email is: " + dto.getEmail());
+        System.out.println("Course Type is: " + dto.getCourseType());
+        System.out.println("Payment is: " + dto.getPaymentType());
     }
 
 }

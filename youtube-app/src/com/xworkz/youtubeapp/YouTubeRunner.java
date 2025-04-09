@@ -14,6 +14,7 @@ public class YouTubeRunner {
 
             YouTubeApp app = new YouTubeApp();
             app.playVideo(dto);
+            app.fetchDetails();
         }
     }
 

@@ -3,12 +3,14 @@ package com.xworkz.makemytrip.booking;
 import com.xworkz.makemytrip.dto.MakeMyTripDto;
 
 public class MakeMyTripBooking {
-
+MakeMyTripDto dto;
     public boolean bookFlight(MakeMyTripDto dto) {
+
         boolean bookingConfirmed = false;
         boolean validated = validateBooking(dto);
         if (validated) {
             bookingConfirmed = true;
+            this.dto = dto;
             System.out.println("Flight booking successful!");
         } else {
             System.out.println("Flight booking failed due to invalid details.");
@@ -65,5 +67,17 @@ public class MakeMyTripBooking {
         }
 
         return isValid;
+    }
+    public void fetchDetails(){
+        System.out.println("Passenger Name: " + dto.getPassengerName());
+        System.out.println("Email: " + dto.getEmail());
+        System.out.println("Contact Number: " + dto.getContactNumber());
+        System.out.println("From: " + dto.getDepartureCity());
+        System.out.println("To: " + dto.getArrivalCity());
+        System.out.println("Travel Date: " + dto.getTravelDate());
+        System.out.println("Number of Passengers: " + dto.getNumberOfPassengers());
+        System.out.println("Fare: " + dto.getFare());
+        System.out.println("Payment Method: " + dto.getPaymentMethod());
+
     }
 }

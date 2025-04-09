@@ -14,6 +14,7 @@ public class InstagramRunner {
 
             InstagramApp instagramApp = new InstagramApp();
             instagramApp.registerProfile(instagram);
+            instagramApp.fetchDetails();
         }
     }
 

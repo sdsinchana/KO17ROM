@@ -15,6 +15,7 @@ public class YohooRunner {
 
             YohooApp app = new YohooApp();
             app.openMessenger(dto);
+            app.fetchDetails();
         }
 
 

@@ -3,14 +3,16 @@ package com.xworkz.snapchatapp.generatesnapchat;
 import com.xworkz.snapchatapp.snapchatdto.SnapchatDto;
 
 public class Snapchat {
-
+SnapchatDto dto;
     public boolean newAccount(SnapchatDto snapchatDto) {
         boolean isUserRegistered = false;
         boolean userValidated = validateAccount(snapchatDto);
         if (userValidated) {
             isUserRegistered = true;
+            dto = snapchatDto;
+            System.out.println("User Details Valid");
         } else {
-            System.out.println("User details invalid....");
+            System.out.println("User details invalid");
         }
         return isUserRegistered;
     }
@@ -80,5 +82,17 @@ public class Snapchat {
         }
 
         return userValidated;
+    }
+    public void fetchDetails(){
+        System.out.println("The First Name: " + dto.getFirstName());
+        System.out.println("The Last Name: " + dto.getLastName());
+        System.out.println("The DOB: " + dto.getDob());
+        System.out.println("The Gender: " + dto.getGender());
+        System.out.println("The Email: " + dto.getEmail());
+        System.out.println("The Mobile: " + dto.getMobile());
+        System.out.println("The Username: " + dto.getUserName());
+        System.out.println("The Password: " + dto.getPassword());
+
+
     }
 }

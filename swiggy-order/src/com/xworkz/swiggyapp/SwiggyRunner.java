@@ -15,6 +15,7 @@ public class SwiggyRunner {
 
             SwiggyApp app = new SwiggyApp();
             app.placeOrder(dto);
+            app.fetchDetails();
         }
 }
 

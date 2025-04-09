@@ -2,18 +2,18 @@ package com.xworkz.amazonapp;
 
 public class AmazonRunner {
 
+
     public static void main(String[] args) {
-        AmazonDto amazon = new AmazonDto();
+        AmazonDto amazonDto = new AmazonDto();
+        amazonDto.setFullName("Sinchana_Sd");
+        amazonDto.setMobileNumber("7676496955");
+        amazonDto.setEmail("sinchana@gmail.com");
+        amazonDto.setPassword("sinchu@123");
+        amazonDto.setShippingAddress("Bengaluru, India");
 
-        amazon.setProductName("Wireless Mouse");
-        amazon.setPrice(899.99);
-        amazon.setQuantity(2);
-        amazon.setSellerName("TechGadgets");
-        amazon.setCategory("Electronics");
-        amazon.setInStock(true);
-
-        AmazonApp amazonOrder = new AmazonApp();
-        amazonOrder.registerOrder(amazon);
+        AmazonApp amazonApp = new AmazonApp();
+        amazonApp.UserRegistered(amazonDto);
+        amazonApp.fetchDetails();
     }
 }
 

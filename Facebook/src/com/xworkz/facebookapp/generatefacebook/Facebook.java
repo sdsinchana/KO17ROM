@@ -4,18 +4,22 @@ import com.xworkz.facebookapp.constants.Gender;
 import com.xworkz.facebookapp.facebookdto.FacebookDto;
 
 public class Facebook {
+    FacebookDto dto;
 
-    public boolean newAccount(FacebookDto facebookDto){
+    public boolean newAccount(FacebookDto facebookDto) {
 
-        boolean isUserRegistered =false;
+        boolean isUserRegistered = false;
         boolean userValidated = validateAccount(facebookDto);
-        if (userValidated == true){
+        if (userValidated) {
             isUserRegistered = true;
-        }else{
-            System.out.println("User details invalid....");
+            dto = facebookDto;
+            System.out.println("User Details Valid");
+        } else {
+            System.out.println("User details invalid");
         }
         return isUserRegistered;
     }
+
     public boolean validateAccount(FacebookDto facebookDto) {
 
         boolean userValidated = false;
@@ -77,11 +81,22 @@ public class Facebook {
             System.out.println("Invalid Username!!!!");
         }
 
-        if (firstNameValid == true && lastNameValid == true && dobValid == true && genderValid == true && emailValid == true &&
-                mobileValid == true && passwordValid == true && userNameValid == true) {
+        if (firstNameValid && lastNameValid && dobValid && genderValid && emailValid &&
+                mobileValid && passwordValid && userNameValid) {
             userValidated = true;
         }
 
         return userValidated;
+    }
+
+    public void fetchDetails() {
+        System.out.println("The First Name: " + dto.getFirstName());
+        System.out.println("The Last Name: " + dto.getLastName());
+        System.out.println("The DOB: " + dto.getDob());
+        System.out.println("The Gender: " + dto.getGender());
+        System.out.println("The Email: " + dto.getEmail());
+        System.out.println("The Mobile: " + dto.getMobile());
+        System.out.println("The Username: " + dto.getUserName());
+        System.out.println("The Password: " + dto.getPassword());
     }
 }

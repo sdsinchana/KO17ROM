@@ -1,10 +1,13 @@
 package com.xworkz.dominosapp;
 
 public class DominosApp {
-
+DominosDto dto;
         public void registerOrder(DominosDto dominos) {
+            boolean isorderValid = false;
             boolean isOrderValid = isOrderValid(dominos);
             if (isOrderValid) {
+                isorderValid = true;
+                dto = dominos;
                 System.out.println("Pizza order placed successfully!");
             } else {
                 System.out.println("Pizza order failed. Please check the order details.");
@@ -39,12 +42,20 @@ public class DominosApp {
                 isValid = false;
             }
 
-            // Delivery check is not mandatory; optional validation
-            if (!dominos.isDelivery()) {
+
+            if (!dominos.getIsDelivery()) {
                 System.out.println("This order is for pickup, not delivery.");
             }
 
             return isValid;
+        }
+        public void fetchDetails(){
+            System.out.println("Pizza Name :"+dto.getPizzaName());
+            System.out.println("Size :"+dto.getSize());
+            System.out.println("Toppings :"+dto.getToppings());
+            System.out.println("Quantity :"+dto.getQuantity());
+            System.out.println("Price :"+dto.getPrice());
+            System.out.println("Delivery :"+dto.getIsDelivery());
         }
     }
 

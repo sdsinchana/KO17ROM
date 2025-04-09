@@ -54,7 +54,7 @@ public class SwiggyDto {
             this.isVeg = isVeg;
         }
 
-        public boolean isVeg() {
+        public boolean getIsVeg() {
             return isVeg;
         }
     }

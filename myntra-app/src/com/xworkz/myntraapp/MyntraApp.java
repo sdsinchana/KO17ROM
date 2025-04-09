@@ -1,12 +1,16 @@
 package com.xworkz.myntraapp;
 
 public class MyntraApp {
-
+MyntraDto dto;
         public void registerProduct(MyntraDto dto) {
+            boolean isvalid = false;
             boolean isValid = isProductValid(dto);
             if (isValid) {
+                isvalid = true;
+                this.dto = dto;
                 System.out.println("Product listed on Myntra successfully!");
             } else {
+
                 System.out.println("Product listing failed. Please verify product information.");
             }
         }
@@ -30,7 +34,7 @@ public class MyntraApp {
             }
 
             if (dto.getTargetAudience() == null || dto.getTargetAudience().isEmpty()) {
-                System.out.println("Please specify the target audience (e.g., Men, Women, Kids).");
+                System.out.println("Please specify the target audience .");
                 isValid = false;
             }
 
@@ -40,12 +44,21 @@ public class MyntraApp {
             }
 
             // Optional info
-            if (!dto.isReturnPolicy()) {
+            if (!dto.getIsReturnPolicy()) {
                 System.out.println("Note: This product is not eligible for return.");
             }
 
             return isValid;
         }
+    public void fetchDetails(){
+        System.out.println("Brand :"+dto.getBrand());
+        System.out.println("Product Category :"+dto.getProductCategory());
+        System.out.println("Fabric Type :"+dto.getFabricType());
+        System.out.println("Target Audience :"+dto.getTargetAudience());
+        System.out.println("Discount Rate :"+dto.getDiscountRate());
+        System.out.println("Return Policy :"+dto.getIsReturnPolicy());
+
     }
+}
 
 

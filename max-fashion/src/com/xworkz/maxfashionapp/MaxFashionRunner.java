@@ -15,6 +15,7 @@ public class MaxFashionRunner {
 
             MaxFashionApp fashionApp = new MaxFashionApp();
             fashionApp.registerProduct(fashionDto);
+            fashionApp.fetchDetails();
         }
     }
 

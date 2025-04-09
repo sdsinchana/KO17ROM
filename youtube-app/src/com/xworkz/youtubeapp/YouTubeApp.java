@@ -1,22 +1,17 @@
 package com.xworkz.youtubeapp;
 
 public class YouTubeApp {
+YouTubeDto dto;
+
         public void playVideo(YouTubeDto dto) {
+            boolean isvalid;
             boolean isValid = isVideoValid(dto);
             if (isValid) {
-                System.out.println("Now playing: " + dto.getVideoTitle() + " on channel " + dto.getChannelName());
-
-                System.out.println("Category: " + dto.getCategory());
-                System.out.println("Duration: " + dto.getVideoLength() + " seconds");
-
-                if (dto.isLive()) {
-                    System.out.println(" This video is LIVE now!");
-                } else {
-                    System.out.println(" This is a recorded video.");
-                }
-
-                System.out.println("Subscribers: " + dto.getSubscriberCount());
-            } else {
+                isvalid = true;
+                this.dto=dto;
+                System.out.println("Now playing on channel ");
+            }
+            else {
                 System.out.println("Failed to load video. Please check video details.");
             }
         }
@@ -51,6 +46,11 @@ public class YouTubeApp {
 
             return isValid;
         }
-
-
+        public void fetchDetails(){
+            System.out.println("Channel Name :"+dto.getChannelName());
+            System.out.println("Video Title :"+dto.getVideoTitle());
+            System.out.println("Category :"+dto.getCategory());
+            System.out.println("CVideo Length :"+dto.getVideoLength());
+            System.out.println("Subscription Count :"+dto.getSubscriberCount());
+        }
 }

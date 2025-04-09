@@ -1,10 +1,13 @@
 package com.xworkz.swiggyapp;
 
 public class SwiggyApp {
-
+SwiggyDto dto;
         public void placeOrder(SwiggyDto dto) {
+            boolean isvalid = false;
             boolean isValid = isOrderValid(dto);
             if (isValid) {
+                isvalid = true;
+                this.dto = dto;
                 System.out.println("Order placed successfully on Swiggy!");
             } else {
                 System.out.println("Order placement failed. Please check the order details.");
@@ -39,12 +42,20 @@ public class SwiggyApp {
                 isValid = false;
             }
 
-            // Optional info
-            if (!dto.isVeg()) {
+
+            if (!dto.getIsVeg()) {
                 System.out.println("Note: This is a non-vegetarian item.");
             }
 
             return isValid;
+        }
+        public void fetchDetails(){
+            System.out.println("Restaurant Name :"+dto.getRestaurantName());
+            System.out.println("Food Item :"+dto.getFoodItem());
+            System.out.println("Cuisine Type :"+dto.getCuisineType());
+            System.out.println("Delivery Location :"+dto.getDeliveryLocation());
+            System.out.println("Price :"+dto.getPrice());
+            System.out.println("Veg :"+dto.getIsVeg());
         }
     }
 

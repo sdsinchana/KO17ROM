@@ -1,11 +1,14 @@
 package com.xworkz.spotifyapp;
 
 public class SpotifyGenerate {
-
+        SpotifyDto dto;
 
         public void addToPlaylist(SpotifyDto spotify) {
             boolean isSongValid = isSongValid(spotify);
+            boolean issongValid = false;
             if (isSongValid) {
+                issongValid = true;
+                dto = spotify;
                 System.out.println("Song added to playlist successfully");
             } else {
                 System.out.println("Song could not be added to playlist");
@@ -49,6 +52,14 @@ public class SpotifyGenerate {
                 isSongValid = true;
 
             return isSongValid;
+        }
+
+        public void fetchDetails(){
+            System.out.println("Song Title :"+dto.getSongTitle());
+            System.out.println("Artist :"+dto.getArtist());
+            System.out.println("Album :"+dto.getAlbum());
+            System.out.println("Time Duration :"+dto.getDurationInSeconds());
+            System.out.println("Genre :"+dto.getGenre());
         }
     }
 

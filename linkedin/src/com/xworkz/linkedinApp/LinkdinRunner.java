@@ -6,21 +6,18 @@ import com.xworkz.linkedinApp.linkdin.LinkedIn;
 import com.xworkz.linkedinApp.linkdindto.LinkdinDto;
 
 public class LinkdinRunner {
-    public static void main(String arg[]){
+    public static void main(String arg[]) {
 
         LinkdinDto linkdinDto = new LinkdinDto();
-        linkdinDto.setEmail("bgsu335");
-        linkdinDto.setName("mjutes");
-        linkdinDto.setPhnNo(5638298643l);
+        linkdinDto.setEmail("sinchanasd241@gmail.com");
+        linkdinDto.setName("Sinchana SD ");
+        linkdinDto.setPhnNo(7676496955L);
         linkdinDto.setSoftwareskills(Software.java);
         linkdinDto.setEduaction(Education.DEGREE);
 
-        LinkedIn bank = new LinkedIn();
-        if(bank.User(linkdinDto)){
-            System.out.println("successfull");
-        }
-        else
-            System.out.println("unsuccesfull");
-    }
+        LinkedIn app = new LinkedIn();
+        app.User(linkdinDto);
+        app.fetchDetails();
 
+    }
 }

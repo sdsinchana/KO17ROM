@@ -13,6 +13,7 @@ public class SpotifyRunner {
 
             SpotifyGenerate spotifyApp = new SpotifyGenerate();
             spotifyApp.addToPlaylist(spotify);
+            spotifyApp.fetchDetails();
         }
     }
 

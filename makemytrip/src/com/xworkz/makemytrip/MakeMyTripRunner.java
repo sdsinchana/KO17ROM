@@ -19,19 +19,11 @@ public class MakeMyTripRunner {
         dto.setFare(7599.99);
         dto.setPaymentMethod(PaymentMethod.CREDIT_CARD);
 
-        System.out.println("Passenger Name: " + dto.getPassengerName());
-        System.out.println("Email: " + dto.getEmail());
-        System.out.println("Contact Number: " + dto.getContactNumber());
-        System.out.println("From: " + dto.getDepartureCity());
-        System.out.println("To: " + dto.getArrivalCity());
-        System.out.println("Travel Date: " + dto.getTravelDate());
-        System.out.println("Number of Passengers: " + dto.getNumberOfPassengers());
-        System.out.println("Fare: " + dto.getFare());
-        System.out.println("Payment Method: " + dto.getPaymentMethod());
 
-        System.out.println("----------------------------------");
+        
 
         MakeMyTripBooking booking = new MakeMyTripBooking();
         booking.bookFlight(dto);
+        booking.fetchDetails();
     }
 }

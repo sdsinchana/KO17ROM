@@ -54,7 +54,7 @@ public class InstagramDto {
             this.isPrivate = isPrivate;
         }
 
-        public boolean isPrivate() {
+        public boolean getIsPrivate() {
             return isPrivate;
         }
     }

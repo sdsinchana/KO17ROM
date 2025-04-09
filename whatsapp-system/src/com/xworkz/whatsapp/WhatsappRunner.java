@@ -5,7 +5,7 @@ public class WhatsappRunner {
             WhatsappDto dto = new WhatsappDto();
 
             dto.setUserName("Sinchana");
-            dto.setStatusMessage("Busy coding");
+            dto.setStatusMessage("Busy online");
             dto.setPhoneNumber("9876543210");
             dto.setIsOnline(true);
             dto.setIsTyping(false);
@@ -13,6 +13,7 @@ public class WhatsappRunner {
 
             WhatsappApp app = new WhatsappApp();
             app.launchChat(dto);
+            app.fetchDetails();
         }
 
 

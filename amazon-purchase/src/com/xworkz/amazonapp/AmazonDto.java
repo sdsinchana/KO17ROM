@@ -1,62 +1,51 @@
 package com.xworkz.amazonapp;
 
 public class AmazonDto {
+    private String fullName;
+    private String mobileNumber;
+    private String email;
+    private String password;
+    private String shippingAddress;
 
-
-        private String productName;
-        private double price;
-        private int quantity;
-        private String sellerName;
-        private String category;
-        private boolean inStock;
-
-        public void setProductName(String productName) {
-            this.productName = productName;
-        }
-
-        public String getProductName() {
-            return productName;
-        }
-
-        public void setPrice(double price) {
-            this.price = price;
-        }
-
-        public double getPrice() {
-            return price;
-        }
-
-        public void setQuantity(int quantity) {
-            this.quantity = quantity;
-        }
-
-        public int getQuantity() {
-            return quantity;
-        }
-
-        public void setSellerName(String sellerName) {
-            this.sellerName = sellerName;
-        }
-
-        public String getSellerName() {
-            return sellerName;
-        }
-
-        public void setCategory(String category) {
-            this.category = category;
-        }
-
-        public String getCategory() {
-            return category;
-        }
-
-        public void setInStock(boolean inStock) {
-            this.inStock = inStock;
-        }
-
-        public boolean isInStock() {
-            return inStock;
-        }
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setShippingAddress(String shippingAddress) {
+        this.shippingAddress = shippingAddress;
+    }
+
+    public String getShippingAddress() {
+        return shippingAddress;
+    }
+}
 
 

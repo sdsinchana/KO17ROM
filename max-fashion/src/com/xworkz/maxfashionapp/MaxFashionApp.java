@@ -1,11 +1,14 @@
 package com.xworkz.maxfashionapp;
 
 public class MaxFashionApp {
-
+        MaxFashionDto dto;
 
         public void registerProduct(MaxFashionDto fashionDto) {
+            boolean isvalid = false;
             boolean isValid = isProductValid(fashionDto);
             if (isValid) {
+                isvalid = true;
+                dto = fashionDto;
                 System.out.println("Product listed on MaxFashion successfully!");
             } else {
                 System.out.println("Product listing failed. Please check the product details.");
@@ -40,12 +43,21 @@ public class MaxFashionApp {
                 isValid = false;
             }
 
-            // Optional check
+
             if (!fashionDto.getReturnable()) {
                 System.out.println("Note: This product is not returnable.");
             }
 
             return isValid;
+        }
+
+        public void fetchDetails(){
+            System.out.println("Brand Name :"+dto.getBrandName());
+            System.out.println("Product Name :"+dto.getProductType());
+            System.out.println("Materials :"+dto.getMaterial());
+            System.out.println("Gender Category :"+dto.getGenderCategory());
+            System.out.println("Discount Percentage :"+dto.getDiscountPercentage());
+            System.out.println("Returnable :"+dto.getReturnable());
         }
     }
 

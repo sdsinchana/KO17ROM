@@ -3,9 +3,9 @@ package com.xworkz.myntraapp;
 public class MyntraDto {
 
         private String brand;
-        private String productCategory; // e.g., Shirt, Dress, Footwear
-        private String fabricType; // e.g., Cotton, Silk, Synthetic
-        private String targetAudience; // e.g., Men, Women, Kids
+        private String productCategory;
+        private String fabricType;
+        private String targetAudience;
         private double discountRate;
         private boolean returnPolicy;
 
@@ -53,7 +53,7 @@ public class MyntraDto {
             this.returnPolicy = returnPolicy;
         }
 
-        public boolean isReturnPolicy() {
+        public boolean getIsReturnPolicy() {
             return returnPolicy;
         }
     }

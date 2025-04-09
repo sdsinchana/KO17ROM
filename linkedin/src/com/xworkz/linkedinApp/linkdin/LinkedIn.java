@@ -3,11 +3,15 @@ package com.xworkz.linkedinApp.linkdin;
 import com.xworkz.linkedinApp.linkdindto.LinkdinDto;
 
 public class LinkedIn {
-    public  boolean User(LinkdinDto linkdinDto){
+    LinkdinDto dto;
+    public  boolean User(LinkdinDto linkdinDto) {
         boolean isUserRegisterd = false;
         boolean uservalid = validateUser(linkdinDto);
-        if(uservalid == true )
+        if (uservalid){
+            dto = linkdinDto;
             isUserRegisterd = true;
+        System.out.println("Registered successfully");
+    }
         else{
             System.out.println("not register");
         }
@@ -39,9 +43,15 @@ public class LinkedIn {
         }
         if(isEmail == true && isName == true && isPhnNo == true && isSoftware == true && isEducation == true)
             isUserValidated = true;
-        else
-            System.out.println("try again");
+
         return isUserValidated;
+    }
+    public void fetchDetails() {
+        System.out.println("Email is: " + dto.getEmail());
+        System.out.println("Name is: " + dto.getName());
+        System.out.println("Phone Number is: " + dto.getPhnNo());
+        System.out.println("Software Skills are: " + dto.getSoftwareskills());
+        System.out.println("Education is: " + dto.getEduaction());
     }
 
 }

@@ -1,27 +1,15 @@
 package com.xworkz.yohooapp;
 
 public class YohooApp {
-
+YohooDto dto;
         public void openMessenger(YohooDto dto) {
+            boolean isvalid;
+            this.dto = dto;
             boolean isValid = isProfileValid(dto);
             if (isValid) {
-                System.out.println("Opening Yohoo Messenger for " + dto.getDisplayName() );
-
-                if (dto.isActiveNow()) {
-                    System.out.println(dto.getDisplayName() + " is currently active ");
-                    if (dto.isComposingMessage()) {
-                        System.out.println(dto.getDisplayName() + " is typing...");
-                    }
-                } else {
-                    System.out.println(dto.getDisplayName() + " is currently offline ");
-                }
-
-                if (dto.getPendingNotifications() > 0) {
-                    System.out.println("You have " + dto.getPendingNotifications() + " new notifications");
-                }
-
-                System.out.println("Mood: \"" + dto.getMoodMessage() + "\"");
-            } else {
+                System.out.println("Opening Yohoo Messenger for you");
+            }
+            else {
                 System.out.println("Failed to load Yohoo profile. Please verify details.");
             }
         }
@@ -50,6 +38,12 @@ public class YohooApp {
             }
 
             return isValid;
+        }
+        public void fetchDetails(){
+            System.out.println("Display Name :"+dto.getDisplayName());
+            System.out.println("Contact Number :"+dto.getContactNumber());
+            System.out.println("Mood Message :"+dto.getMoodMessage());
+            System.out.println("Pending Notifications :"+dto.getPendingNotifications());
         }
 
 

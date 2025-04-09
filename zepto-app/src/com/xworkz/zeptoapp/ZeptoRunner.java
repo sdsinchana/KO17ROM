@@ -15,6 +15,7 @@ public class ZeptoRunner {
 
             ZeptoApp app = new ZeptoApp();
             app.placeOrder(dto);
+            app.fetchDetails();
         }
 
 

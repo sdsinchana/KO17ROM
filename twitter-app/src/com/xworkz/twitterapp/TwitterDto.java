@@ -45,7 +45,7 @@ public class TwitterDto {
             this.isVerified = isVerified;
         }
 
-        public boolean isVerified() {
+        public boolean getIsVerified() {
             return isVerified;
         }
 
