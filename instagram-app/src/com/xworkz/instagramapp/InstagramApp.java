@@ -19,7 +19,7 @@ InstagramDto dto;
         public boolean isProfileValid(InstagramDto instagram) {
             boolean isValid = true;
 
-            if (instagram.getUserName() == null || instagram.getUserName().isEmpty()) {
+            if (instagram.getUserName()== null || instagram.getUserName().isEmpty()) {
                 System.out.println("Invalid username.");
                 isValid = false;
             }

@@ -1,7 +1,16 @@
 package com.xworkz.carcontrolapp;
 
 import com.xworkz.controlapp.constants.ControlMode;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class CarControlDto {
 
         private String carModel;
@@ -13,7 +22,7 @@ public class CarControlDto {
         private double speed;
         private ControlMode controlMode;
 
-        public void setCarModel(String carModel) {
+      /*  public void setCarModel(String carModel) {
             this.carModel = carModel;
         }
 
@@ -76,4 +85,6 @@ public class CarControlDto {
         public ControlMode getControlMode() {
             return controlMode;
         }
+
+       */
 }

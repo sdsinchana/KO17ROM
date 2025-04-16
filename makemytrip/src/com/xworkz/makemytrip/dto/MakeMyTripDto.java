@@ -1,7 +1,15 @@
 package com.xworkz.makemytrip.dto;
 
 import com.xworkz.makemytrip.constants.PaymentMethod;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class MakeMyTripDto {
 
     private String passengerName;
@@ -14,7 +22,7 @@ public class MakeMyTripDto {
     private double fare;
     private PaymentMethod paymentMethod;
 
-    public String getPassengerName() {
+   /* public String getPassengerName() {
         return passengerName;
     }
 
@@ -85,4 +93,6 @@ public class MakeMyTripDto {
     public void setPaymentMethod(PaymentMethod paymentMethod) {
         this.paymentMethod = paymentMethod;
     }
+
+    */
 }

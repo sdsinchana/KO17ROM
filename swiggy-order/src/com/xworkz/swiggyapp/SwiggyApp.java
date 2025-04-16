@@ -17,7 +17,7 @@ SwiggyDto dto;
         public boolean isOrderValid(SwiggyDto dto) {
             boolean isValid = true;
 
-            if (dto.getRestaurantName() == null || dto.getRestaurantName().isEmpty()) {
+            if (dto.getRestaurantName()== null || dto.getRestaurantName().isEmpty()) {
                 System.out.println("Restaurant name cannot be empty.");
                 isValid = false;
             }
@@ -43,7 +43,7 @@ SwiggyDto dto;
             }
 
 
-            if (!dto.getIsVeg()) {
+            if (!dto.isVeg()) {
                 System.out.println("Note: This is a non-vegetarian item.");
             }
 
@@ -55,7 +55,7 @@ SwiggyDto dto;
             System.out.println("Cuisine Type :"+dto.getCuisineType());
             System.out.println("Delivery Location :"+dto.getDeliveryLocation());
             System.out.println("Price :"+dto.getPrice());
-            System.out.println("Veg :"+dto.getIsVeg());
+            System.out.println("Veg :"+dto.isVeg());
         }
     }
 

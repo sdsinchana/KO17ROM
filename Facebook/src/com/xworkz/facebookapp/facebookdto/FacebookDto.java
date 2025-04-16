@@ -1,7 +1,15 @@
 package com.xworkz.facebookapp.facebookdto;
 
 import com.xworkz.facebookapp.constants.Gender;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class FacebookDto {
 
     private String firstName;
@@ -11,10 +19,9 @@ public class FacebookDto {
     private String email;
     private String mobile;
     private String password;
-
     private String userName;
 
-    public void setFirstName(String firstName) {
+   /* public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
@@ -77,4 +84,6 @@ public class FacebookDto {
     public String getUserName() {
         return userName;
     }
+
+    */
 }

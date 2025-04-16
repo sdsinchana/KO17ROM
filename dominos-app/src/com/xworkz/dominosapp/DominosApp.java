@@ -43,7 +43,7 @@ DominosDto dto;
             }
 
 
-            if (!dominos.getIsDelivery()) {
+            if (!dominos.isDelivery()) {
                 System.out.println("This order is for pickup, not delivery.");
             }
 
@@ -55,7 +55,7 @@ DominosDto dto;
             System.out.println("Toppings :"+dto.getToppings());
             System.out.println("Quantity :"+dto.getQuantity());
             System.out.println("Price :"+dto.getPrice());
-            System.out.println("Delivery :"+dto.getIsDelivery());
+            System.out.println("Delivery :"+dto.isDelivery());
         }
     }
 

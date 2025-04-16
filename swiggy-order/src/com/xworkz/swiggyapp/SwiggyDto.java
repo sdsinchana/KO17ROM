@@ -1,5 +1,14 @@
 package com.xworkz.swiggyapp;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class SwiggyDto {
 
 
@@ -10,7 +19,7 @@ public class SwiggyDto {
         private double price;
         private boolean isVeg;
 
-        public void setRestaurantName(String restaurantName) {
+     /*   public void setRestaurantName(String restaurantName) {
             this.restaurantName = restaurantName;
         }
 
@@ -57,6 +66,8 @@ public class SwiggyDto {
         public boolean getIsVeg() {
             return isVeg;
         }
+
+      */
     }
 
 

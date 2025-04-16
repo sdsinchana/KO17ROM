@@ -10,7 +10,7 @@ public class InstagramRunner {
             instagram.setBio("Coder | Reader | Explorer ");
             instagram.setFollowersCount(1200);
             instagram.setFollowingCount(350);
-            instagram.setIsPrivate(false);
+            instagram.isPrivate();
 
             InstagramApp instagramApp = new InstagramApp();
             instagramApp.registerProfile(instagram);

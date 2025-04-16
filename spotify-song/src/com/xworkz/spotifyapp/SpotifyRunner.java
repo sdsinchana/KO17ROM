@@ -9,7 +9,7 @@ public class SpotifyRunner {
             spotify.setAlbum("Divide");
             spotify.setDurationInSeconds(263);
             spotify.setGenre("Pop");
-            spotify.setIsFavorite(true);
+            spotify.isFavorite();
 
             SpotifyGenerate spotifyApp = new SpotifyGenerate();
             spotifyApp.addToPlaylist(spotify);

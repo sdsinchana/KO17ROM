@@ -1,7 +1,15 @@
 package com.xworkz.snapchatapp.snapchatdto;
 
 import com.xworkz.snapchatapp.constants.Gender;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class SnapchatDto {
 
     private String firstName;
@@ -13,7 +21,7 @@ public class SnapchatDto {
     private String password;
     private String userName;
 
-    public void setFirstName(String firstName) {
+    /* public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
@@ -76,4 +84,6 @@ public class SnapchatDto {
     public String getUserName() {
         return userName;
     }
+
+     */
 }

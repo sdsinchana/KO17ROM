@@ -1,5 +1,14 @@
 package com.xworkz.instagramapp;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class InstagramDto {
 
 
@@ -10,7 +19,7 @@ public class InstagramDto {
         private int followingCount;
         private boolean isPrivate;
 
-        public void setUserName(String userName) {
+        /* public void setUserName(String userName) {
             this.userName = userName;
         }
 
@@ -57,6 +66,8 @@ public class InstagramDto {
         public boolean getIsPrivate() {
             return isPrivate;
         }
+
+         */
     }
 
 

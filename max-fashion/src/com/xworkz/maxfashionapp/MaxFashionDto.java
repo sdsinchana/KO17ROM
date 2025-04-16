@@ -1,5 +1,14 @@
 package com.xworkz.maxfashionapp;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class MaxFashionDto {
 
 
@@ -10,7 +19,7 @@ public class MaxFashionDto {
         private double discountPercentage;
         private boolean isReturnable;
 
-        public void setBrandName(String brandName) {
+      /*  public void setBrandName(String brandName) {
             this.brandName = brandName;
         }
 
@@ -58,6 +67,8 @@ public class MaxFashionDto {
             return isReturnable;
         }
 
+
+       */
 
 }
 

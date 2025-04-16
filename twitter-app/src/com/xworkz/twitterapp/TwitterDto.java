@@ -1,5 +1,15 @@
 package com.xworkz.twitterapp;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class TwitterDto {
 
         private String userName;
@@ -9,7 +19,7 @@ public class TwitterDto {
         private boolean isVerified;
         private int followersCount;
 
-        public void setUserName(String userName) {
+       /* public void setUserName(String userName) {
             this.userName = userName;
         }
 
@@ -57,6 +67,8 @@ public class TwitterDto {
             return followersCount;
         }
 
+
+        */
 
 
 }

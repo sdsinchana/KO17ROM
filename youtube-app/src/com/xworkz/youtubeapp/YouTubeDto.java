@@ -1,16 +1,25 @@
 package com.xworkz.youtubeapp;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class YouTubeDto {
 
 
         private String channelName;
         private String videoTitle;
-        private String category; // e.g., Education, Entertainment, Music
-        private int videoLength; // in seconds
+        private String category;
+        private int videoLength;
         private boolean isLive;
         private int subscriberCount;
 
-        public void setChannelName(String channelName) {
+        /*public void setChannelName(String channelName) {
             this.channelName = channelName;
         }
 
@@ -58,5 +67,7 @@ public class YouTubeDto {
             return subscriberCount;
         }
 
+
+         */
 
 }

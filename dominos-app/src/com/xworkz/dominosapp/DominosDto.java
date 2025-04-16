@@ -1,5 +1,14 @@
 package com.xworkz.dominosapp;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class DominosDto {
 
 
@@ -10,7 +19,7 @@ public class DominosDto {
         private double price;
         private boolean isDelivery;
 
-        public void setPizzaName(String pizzaName) {
+      /*  public void setPizzaName(String pizzaName) {
             this.pizzaName = pizzaName;
         }
 
@@ -57,6 +66,8 @@ public class DominosDto {
         public boolean getIsDelivery() {
             return isDelivery;
         }
+
+       */
     }
 
 

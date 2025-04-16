@@ -1,5 +1,14 @@
 package com.xworkz.yohooapp;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class YohooDto {
 
 
@@ -10,7 +19,7 @@ public class YohooDto {
         private boolean composingMessage;
         private int pendingNotifications;
 
-        public void setDisplayName(String displayName) {
+       /* public void setDisplayName(String displayName) {
             this.displayName = displayName;
         }
 
@@ -57,5 +66,7 @@ public class YohooDto {
         public int getPendingNotifications() {
             return pendingNotifications;
         }
+
+        */
 }
 

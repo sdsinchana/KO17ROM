@@ -17,7 +17,7 @@ WhatsappDto dto;
         public boolean isProfileValid(WhatsappDto dto) {
             boolean isValid = true;
 
-            if (dto.getUserName() == null || dto.getUserName().isEmpty()) {
+            if (dto.getUserName()== null || dto.getUserName().isEmpty()) {
                 System.out.println("Username cannot be empty.");
                 isValid = false;
             }

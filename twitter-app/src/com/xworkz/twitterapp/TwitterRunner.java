@@ -10,7 +10,7 @@ public class TwitterRunner {
             dto.setTweetContent("Excited to explore Java Spring Boot.");
             dto.setTweetLength(43);
             dto.setLocation("Bangalore");
-            dto.setIsVerified(true);
+            dto.isVerified();
             dto.setFollowersCount(1500);
 
             TwitterApp app = new TwitterApp();

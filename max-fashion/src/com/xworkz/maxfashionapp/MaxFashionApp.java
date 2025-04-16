@@ -44,7 +44,7 @@ public class MaxFashionApp {
             }
 
 
-            if (!fashionDto.getReturnable()) {
+            if (!fashionDto.isReturnable()) {
                 System.out.println("Note: This product is not returnable.");
             }
 
@@ -57,7 +57,7 @@ public class MaxFashionApp {
             System.out.println("Materials :"+dto.getMaterial());
             System.out.println("Gender Category :"+dto.getGenderCategory());
             System.out.println("Discount Percentage :"+dto.getDiscountPercentage());
-            System.out.println("Returnable :"+dto.getReturnable());
+            System.out.println("Returnable :"+dto.isReturnable());
         }
     }
 

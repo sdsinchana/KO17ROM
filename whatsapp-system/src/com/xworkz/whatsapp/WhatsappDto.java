@@ -1,5 +1,15 @@
 package com.xworkz.whatsapp;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class WhatsappDto {
 
         private String userName;
@@ -9,7 +19,7 @@ public class WhatsappDto {
         private boolean isTyping;
         private int unreadMessagesCount;
 
-        public void setUserName(String userName) {
+      /*  public void setUserName(String userName) {
             this.userName = userName;
         }
 
@@ -57,5 +67,7 @@ public class WhatsappDto {
             return unreadMessagesCount;
         }
 
+
+       */
 
 }

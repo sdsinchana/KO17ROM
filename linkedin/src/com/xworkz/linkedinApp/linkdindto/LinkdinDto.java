@@ -2,7 +2,15 @@ package com.xworkz.linkedinApp.linkdindto;
 
 import com.xworkz.linkedinApp.Constants.Education;
 import com.xworkz.linkedinApp.Constants.Software;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class LinkdinDto {
     private String name;
     private String email;
@@ -10,7 +18,7 @@ public class LinkdinDto {
     private Software softwareskills;
     private Education eduaction;
 
-    public String getName(){
+    /*public String getName(){
         return name;
     }
     public void setName(String name){
@@ -44,4 +52,6 @@ public class LinkdinDto {
     public void setEduaction(Education eduaction){
         this.eduaction = eduaction;
     }
+
+     */
 }

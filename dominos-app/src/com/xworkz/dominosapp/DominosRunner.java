@@ -11,7 +11,7 @@ public class DominosRunner {
             dominos.setToppings("Corn, Jalapeno, Capsicum");
             dominos.setQuantity(1);
             dominos.setPrice(349.99);
-            dominos.setIsDelivery(true);
+            dominos.isDelivery();
 
             DominosApp dominosApp = new DominosApp();
             dominosApp.registerOrder(dominos);

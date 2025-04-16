@@ -1,5 +1,14 @@
 package com.xworkz.myntraapp;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class MyntraDto {
 
         private String brand;
@@ -9,7 +18,7 @@ public class MyntraDto {
         private double discountRate;
         private boolean returnPolicy;
 
-        public void setBrand(String brand) {
+    /*    public void setBrand(String brand) {
             this.brand = brand;
         }
 
@@ -56,6 +65,8 @@ public class MyntraDto {
         public boolean getIsReturnPolicy() {
             return returnPolicy;
         }
+
+     */
     }
 
 

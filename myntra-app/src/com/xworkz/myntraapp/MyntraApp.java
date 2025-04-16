@@ -44,7 +44,7 @@ MyntraDto dto;
             }
 
             // Optional info
-            if (!dto.getIsReturnPolicy()) {
+            if (!dto.isReturnPolicy()) {
                 System.out.println("Note: This product is not eligible for return.");
             }
 
@@ -56,7 +56,7 @@ MyntraDto dto;
         System.out.println("Fabric Type :"+dto.getFabricType());
         System.out.println("Target Audience :"+dto.getTargetAudience());
         System.out.println("Discount Rate :"+dto.getDiscountRate());
-        System.out.println("Return Policy :"+dto.getIsReturnPolicy());
+        System.out.println("Return Policy :"+dto.isReturnPolicy());
 
     }
 }

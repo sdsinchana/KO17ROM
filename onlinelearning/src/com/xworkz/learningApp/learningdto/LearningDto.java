@@ -2,7 +2,16 @@ package com.xworkz.learningApp.learningdto;
 
 import com.xworkz.learningApp.Constants.Payment;
 import com.xworkz.learningApp.Constants.Course;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class LearningDto {
     private String name;
     private String email;
@@ -10,7 +19,7 @@ public class LearningDto {
     private Course courseType;
     private Payment paymentType;
 
-    public String getName(){
+    /* public String getName(){
         return name;
     }
     public void setName(String name){
@@ -44,4 +53,6 @@ public class LearningDto {
     public void setPaymentType(Payment paymentType){
         this.paymentType = paymentType;
     }
+
+     */
 }

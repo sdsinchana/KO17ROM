@@ -1,16 +1,26 @@
 package com.xworkz.zeptoapp;
 
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ZeptoDto {
 
 
         private String itemName;
         private String storeName;
-        private String category; // e.g., Dairy, Vegetables, Snacks
-        private int quantity; // in units or weight
+        private String category;
+        private int quantity;
         private boolean expressDelivery;
         private double totalPrice;
 
-        public void setItemName(String itemName) {
+       /* public void setItemName(String itemName) {
             this.itemName = itemName;
         }
 
@@ -57,6 +67,8 @@ public class ZeptoDto {
         public double getTotalPrice() {
             return totalPrice;
         }
+
+        */
 
 
 }

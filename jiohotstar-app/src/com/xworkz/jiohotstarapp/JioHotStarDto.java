@@ -1,15 +1,25 @@
 package com.xworkz.jiohotstarapp;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+//Annotations
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class JioHotStarDto {
 
         private String showName;
-        private String genre; // e.g., Drama, Action, Comedy
-        private int duration; // in minutes
+        private String genre;
+        private int duration;
         private boolean isPremium;
         private boolean isLive;
-        private double rating; // out of 10
+        private double rating;
 
-        public void setShowName(String showName) {
+        /*public void setShowName(String showName) {
             this.showName = showName;
         }
 
@@ -56,6 +66,8 @@ public class JioHotStarDto {
         public double getRating() {
             return rating;
         }
+
+         */
 
 
 }

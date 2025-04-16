@@ -1,5 +1,14 @@
 package com.xworkz.spotifyapp;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class SpotifyDto {
 
 
@@ -10,7 +19,7 @@ public class SpotifyDto {
         private String genre;
         private boolean isFavorite;
 
-        public void setSongTitle(String songTitle) {
+       /* public void setSongTitle(String songTitle) {
             this.songTitle = songTitle;
         }
 
@@ -57,6 +66,8 @@ public class SpotifyDto {
         public boolean getIsFavorite() {
             return isFavorite;
         }
+
+        */
     }
 
 

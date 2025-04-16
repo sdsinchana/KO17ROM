@@ -1,7 +1,15 @@
 package com.xworkz.flipkartapp.flipkartdto;
 
 import com.xworkz.flipkartapp.constants.PaymentMethod;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class FlipkartDto {
 
     private String customerName;
@@ -13,7 +21,7 @@ public class FlipkartDto {
     private double price;
     private PaymentMethod paymentMethod;
 
-    public void setCustomerName(String customerName) {
+    /*public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
 
@@ -76,4 +84,6 @@ public class FlipkartDto {
     public PaymentMethod getPaymentMethod() {
         return paymentMethod;
     }
+
+     */
 }

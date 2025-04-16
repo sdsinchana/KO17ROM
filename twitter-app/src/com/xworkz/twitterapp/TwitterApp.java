@@ -43,7 +43,7 @@ public class TwitterApp {
                 isValid = false;
             }
 
-            if (dto.getIsVerified()) {
+            if (dto.isVerified()) {
                 System.out.println("User is verified.");
             } else {
                 System.out.println("User is not verified.");
@@ -58,7 +58,7 @@ public class TwitterApp {
             System.out.println("Twitter Length :"+dto.getTweetLength());
             System.out.println("Location :"+dto.getLocation());
             System.out.println("Followers Count :"+dto.getFollowersCount());
-            System.out.println("Verification :"+dto.getIsVerified());
+            System.out.println("Verification :"+dto.isVerified());
         }
 
 }
